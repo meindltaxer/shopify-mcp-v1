@@ -343,6 +343,8 @@ class UpdateProductInput(BaseModel):
     tags:         Optional[str]  = Field(default=None)
     status:       Optional[str]  = Field(default=None, description="active, archived, or draft")
     variants:     Optional[List[Dict[str, Any]]] = Field(default=None)
+    metafields_global_title_tag: Optional[str] = None
+    metafields_global_description_tag: Optional[str] = None
 
 
 @mcp.tool(
